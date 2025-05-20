@@ -15,7 +15,6 @@ module tb_fullsub;
   initial begin
     $dumpfile("fullsub.vcd");
     $dumpvars(1,tb_fullsub);
+    $monitor("input x=%b y=%b bin=%b out difference=%b borrow=%b",x,y,bin,diff,bout);
   end
-  always@(*)
-    $display("input x=%b y=%b bin=%b out difference=%b borrow=%b",x,y,bin,diff,bout);
 endmodule
