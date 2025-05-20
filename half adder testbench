@@ -3,13 +3,13 @@ module halfadder_tb;
   reg a,b;
   wire s,c;
   halfadder dut(.a(a),.b(b),.s(s),.c(c));
- 	intial begin 
+ 	initial begin 
       a=0;b=0;
  	#1a=0;b=1;
  	#1a=1;b=0;
  	#1a=1;b=1;
 	end
-  	intial begin
+  	initial begin
     	$dumpfile ("halfadder.vcd");
     	$dumpvars (1,halfadder_tb);
   	end
