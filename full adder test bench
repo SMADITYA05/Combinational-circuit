@@ -15,9 +15,8 @@ module tb_fulladder;
 	initial begin
       $dumpfile("fulladder.vcd");
       $dumpvars(1,tb_fulladder);
-    end
-    always@(*)
       $monitor("a=%b,b=%b,cin=%b,sum=%b,carry=%b",a,b,cin,s2,cout);
+    end
 endmodule
                
       
