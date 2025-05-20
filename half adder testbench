@@ -4,6 +4,7 @@ module halfadder_tb;
   wire s,c;
   halfadder dut(.a(a),.b(b),.s(s),.c(c));
  	initial begin 
+      $monitor("a=%b b=%b sum =%b carry=%b",a,b,s,c);
       a=0;b=0;
  	#1a=0;b=1;
  	#1a=1;b=0;
@@ -13,7 +14,5 @@ module halfadder_tb;
     	$dumpfile ("halfadder.vcd");
     	$dumpvars (1,halfadder_tb);
   	end
-  	always@(*)
-    	$display("input values :a=%b b=%b output values s=%b c=%b",a,b,s,c);
 endmodule
   
